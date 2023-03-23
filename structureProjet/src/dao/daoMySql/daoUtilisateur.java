@@ -42,7 +42,7 @@ public class daoUtilisateur implements IDao<Utilisateur,Long> {
 
     @Override
     public Utilisateur findById(Long aLong) {
-        Utilisateur ut;
+        Utilisateur ut=null;
 
         try{
             PreparedStatement pstmt = null;
@@ -58,14 +58,14 @@ public class daoUtilisateur implements IDao<Utilisateur,Long> {
                 ut.setNom( rs.getString("2"));
                 ut.setPrenom( rs.getString("3"));
                 ut.setLogin( rs.getString("4"));
-                ut.setMotDePasse(rs.getString("5"));
-                ut.setRole(rs.getString("6"))
+                ut.setMotDePasse( rs.getString("5") );
+                ut.setRole(rs.getString("6"));
             }
         }
         catch(Exception e){
             e.printStackTrace();
         }
-        return uts;
+        return ut;
     }
 
     @Override

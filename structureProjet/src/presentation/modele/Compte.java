@@ -14,7 +14,7 @@ public class Compte {
     private String          numeroCompte;
     private Double          solde;
     private LocalDateTime   dateCreation;
-    private Client          propriataire = new Client();
+    private Client          propriataire ;
 
     private List<Log>       logs = new ArrayList<>();
 
@@ -22,21 +22,21 @@ public class Compte {
 
     public Compte(){
         setNumeroCompte();
-        setDateCreation(rs.getDate("4"));
+        setDateCreation();
         setSolde(0.0);
  
     }
     
     public Compte(Double solde){
         setNumeroCompte();
-        setDateCreation(rs.getDate("4"));
+        setDateCreation();
         setSolde(solde);
        
     }
     
     
     
-    public void setDateCreation(Date date) {
+    public void setDateCreation() {
     	this.dateCreation = LocalDateTime.now();
     }
     

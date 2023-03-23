@@ -129,6 +129,7 @@ public class daoClient implements IDao<Client,Long> {
         for(Client client:liste) {
                 save(client);
         }
+        return liste;
     }
 
     @Override

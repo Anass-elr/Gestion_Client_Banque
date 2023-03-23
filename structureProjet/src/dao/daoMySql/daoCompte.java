@@ -27,7 +27,7 @@ public class daoCompte implements IDao<Compte,String> {
                 cli = new Compte();
                 cli.setNumeroCompte( rs.getString("2") );
                 cli.setSolde(rs.getDouble("3"));
-                cli.setDateCreation(rs.getDate("4"));
+               //  cli.setDateCreation(rs.getDate("4"));
                 cli.getPropriataire().setId(rs.getLong("5"));
 
                 cpt.add(cli);
@@ -53,7 +53,7 @@ public class daoCompte implements IDao<Compte,String> {
                 Compte cli = new Compte();
                 cli.setNumeroCompte( rs.getString("2") );
                 cli.setSolde(rs.getDouble("3"));
-                cli.setDateCreation(rs.getDate("4"));
+            //    cli.setDateCreation(rs.getDate("4"));
                 cli.getPropriataire().setId(rs.getLong("5"));
 
              return cli;

@@ -1,0 +1,6 @@
+ID			NOM			PRENOM			LOGIN			MOT DE PASS			CIN			EMAIL			TELEPHONE			SEXE			ID_AGENCE
+1			Seffar 	Nizar		seffar22		123456		AA345566			seffarNizar@gmail.com	212661334455		HOMME		NULL
+2			El Guartili 	Ayoub		ayoubG		123456		C12345			ayoub.g@gmail.com	212651223344		HOMME		NULL
+6			Kilali 	Narjis		kilaliN		334433		AB3322			kilali.narjis@gmail.com	21265433222		FEMME		NULL
+7			Hairane 	Chaimae		Stella		stellaStar		C665544			chaimae.hairane@gmail.com	0034332221445		FEMME		NULL
+8			Moharami 	Mesud		moharammi		ms3322		XE43325			Mesut.Moharami@gmail.com	004322334445		HOMME		NULL

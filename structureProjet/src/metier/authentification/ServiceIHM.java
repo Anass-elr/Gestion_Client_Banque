@@ -1,16 +1,14 @@
 package metier.authentification;
 
 import Util.typeAuClavier;
-import dao.IDao;
-import metier.InteractiveConsole;
 import metier.Form.ValiderFormLogin;
+import metier.InteractiveConsole;
 import metier.admin.ServiceIHMAdmin;
 import metier.clients.ServiceIHMClient;
 import presentation.modele.Admin;
 import presentation.modele.Banque;
 import presentation.modele.Client;
 import presentation.modele.Utilisateur;
-import dao.daoFiles.*;
 
 
 public class ServiceIHM implements IServiceIHM,InteractiveConsole{

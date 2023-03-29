@@ -5,6 +5,7 @@ import presentation.modele.Client;
 import presentation.modele.Compte;
 import presentation.modele.Sexe;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -13,6 +14,11 @@ import java.util.List;
 public class daoCompte implements IDao<Compte,String> {
 
 
+    private Connection connection  ;
+
+    public daoCompte(Connection con){
+        this.connection=con;
+    }
     @Override
     public List<Compte> findAll() {
         List<Compte> cpt = new ArrayList<Compte>();

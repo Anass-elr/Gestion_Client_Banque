@@ -4,7 +4,7 @@ public class Admin  extends Utilisateur{
 
     private static  Admin ADMIN = new Admin();
 
-    private Admin(){
+    public Admin(){
         login       = "admin";
         motDePasse  = "1234";
         role        = "Admin";

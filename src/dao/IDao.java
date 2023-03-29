@@ -1,12 +1,10 @@
 package dao;
 
-import dao.daoExceptions.DAOException;
+import model.Client;
 
 import java.util.List;
 
 public interface IDao<T, ID> {
-
-
 
     List<T> findAll();
     T       findById(ID id);
@@ -14,9 +12,9 @@ public interface IDao<T, ID> {
 
     T       save(T t);
     List<T> saveAll(List<T> liste);
-    T       update(T t) throws DAOException;
+    T       update(T t);
 
-    Boolean delete(T t) throws DAOException;
-    Boolean deleteById(ID id) throws DAOException;
+    Boolean delete(T t);
+    Boolean deleteById(ID id);
 
 }

@@ -1,7 +1,6 @@
 package dao.daoMySql;
 
 import dao.IDao;
-import dao.SingConection;
 import presentation.modele.Client;
 import presentation.modele.Sexe;
 
@@ -11,8 +10,16 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+
 public class daoClient implements IDao<Client,Long> {
 
+    private Connection connection  ;
+
+    public daoClient(Connection con){
+        this.connection=con;
+    }
     @Override
     public List<Client> findAll() {
         List<Client> cl = new ArrayList<Client>();

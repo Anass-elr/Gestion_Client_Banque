@@ -1,33 +1,19 @@
 package metier.admin;
 
-import java.security.KeyStore.Entry;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.TreeMap;
-
 import Util.typeAuClavier;
-import dao.IDao;
-import dao.daoFiles.ClientDao;
-import dao.daoMySql.daoClient;
+import dao.Factory;
 import metier.InteractiveConsole;
-import presentation.modele.Banque;
-import presentation.modele.Client;
-import presentation.modele.Compte;
-import presentation.modele.Filtre;
-import presentation.modele.Sexe;
-import presentation.modele.TableauDeBord;
+import presentation.modele.*;
+
+import java.time.LocalDateTime;
+import java.util.*;
 
 public class ServiceAdmin implements IServiceAdmin,InteractiveConsole{
 	
 	
 	private Banque B;
-    private IDao dao=new dao.daoMySql.daoClient();
+
+	Factory ClassFac = Factory.getFactory(1);
 
 	public ServiceAdmin(Banque b) {
 		super();
@@ -50,7 +36,7 @@ public class ServiceAdmin implements IServiceAdmin,InteractiveConsole{
 		
 		if(!B.getClientsDeBanque().contains(c)) {
 			B.getClientsDeBanque().add(c);
-			dao.save(c);
+
 			return c;
 		}
 		return null;	
